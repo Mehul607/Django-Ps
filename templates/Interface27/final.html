@@ -1,0 +1,142 @@
+{% load staticfiles %}
+<head xmlns="http://www.w3.org/1999/html">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=0">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<style>
+
+h1 {
+    color: white;
+    text-align: center;
+    font-family:  calibri;
+    font-size: 3em;
+}
+body  {
+    background-color: #9FA8A3;
+}
+.buttontext {
+    margin-left: auto;
+    margin-right: auto;
+    width: 05em
+}
+.blocktext   {
+    background-color: #c5d5cb;
+    margin:auto;
+    position:center;
+    width:550px;
+    font-family: Calibri, Geneva, sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: bold;
+    color: #09C;
+    border-radius: 10px;
+    padding:10px;
+    padding-top:30px;
+    padding-bottom:30px;
+    border: 1px solid #999;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #f5f5f5;
+}
+input    {
+    width:375px;
+    display:block;
+    border: 1px solid #999;
+    height: 25px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+.input-lg {
+   font-size: 20px;
+   line-height: 30px;
+    width:550px;
+    height:42px;
+}
+.col-md-5{
+    background-color:#e3e0cf;
+    border-radius: 10px;
+    overflow: auto;
+    max-height: 100px;
+    }
+.col-md-12{
+    background-color:#e3e0cf;
+    border-radius: 10px;
+    min-height: 25px;
+    max-height: 400px;
+    overflow: auto
+    }
+.row{
+    margin-left:0px;
+    margin-right:0px;
+}
+.container .text-muted {
+  margin: 20px 0;
+
+}
+</style>
+<title>M.S.A.T.</title>
+<body>
+        <div id="page-content-wrapper">
+            <div class="page-content inset">
+                </br>
+                </br>
+                <h1>Mixed Script Analysis Tool</h1>
+
+                <div id="demo" class="blocktext">
+                    <div class="container-fluid">
+                        <div class="col-xs-12">
+                            <form class="form-group" role="search" action='/analysed/' method="POST">
+                                {% csrf_token %}
+                                <div class="input-group">
+                                    <input type="search" name="sentence" class="form-control input-lg" placeholder="Analyse">
+                                    <span class="input-group-btn">
+                                        <button type="submit" class="btn btn-lg"><i class="glyphicon glyphicon-search"></i></button>
+                                    </span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    {% if word %}
+                        <h3 style="color:#3A3A3E" >Analysed Result</h3>
+                        <div class="container-fluid">
+                            <div class="row-fluid">
+                                <div class="col-md-12">
+                                    {% for a,b,c in word %}
+                                        <span style="color:{{b}}">{{ a }}</span>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                        <h3 style="color:#3A3A3E" >Details</h3>
+                        <div class="container-fluid">
+                            <div class="row-fluid">
+                                <div class="col-md-5">
+                                    {% for a,b,c in word %}
+                                        <p style="color:{{b}}">{{ a }}</p>
+                                    {% endfor %}
+                                </div>
+                                <div class="col-md-2"></div>
+                                <div class="col-md-5">
+                                    {% for a,b,c in word %}
+                                        <p style="color:{{b}}"> {{ c }}</p>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
+                <footer class="footer">
+                    <div class="container">
+                        <p class="text-muted">About |</p>
+                    </div>
+                </footer>
+                </div>
+            </div>
+        </div>
+</body>
