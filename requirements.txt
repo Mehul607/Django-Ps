@@ -9,7 +9,6 @@ psycopg2==2.6.1
 scikit-learn==0.16.1
 numpy
 scipy
-gsl
 sklearn==0.0
 static3==0.6.1
 Unidecode==0.4.18
