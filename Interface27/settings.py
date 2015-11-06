@@ -1,13 +1,13 @@
 import os
-
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+import dj_database_url
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 SECRET_KEY = '_%1z3hd3zu)fw#x=*v^9v(eaa@$=n!+&uvl%f(#&*x&e#n$ne8'
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 INSTALLED_APPS = (
     'django.contrib.admin',
@@ -18,8 +18,12 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'analyser',
 )
+STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'analyser/static')
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -55,7 +59,7 @@ WSGI_APPLICATION = 'Interface27.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'dbmsat',
         'USER': 'root',
         'PASSWORD': '12345',
@@ -75,4 +79,9 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+DATABASES['default'] =  dj_database_url.config()
+
+# Honor the 'X-Forwarded-Proto' header for request.is_secure()
+
 
