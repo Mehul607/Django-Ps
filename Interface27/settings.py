@@ -19,7 +19,7 @@ INSTALLED_APPS = (
     'analyser',
 )
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'analyser/static')
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -55,7 +55,7 @@ WSGI_APPLICATION = 'Interface27.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'dbmsat',
         'USER': 'root',
         'PASSWORD': '12345',
