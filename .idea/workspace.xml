@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="966038ef-5864-4ec1-82f5-62c9026eae58" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/Interface27/style.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Resources/AcroNew2.txt" afterPath="$PROJECT_DIR$/static/Resources/AcroNew2.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Resources/cities.txt" afterPath="$PROJECT_DIR$/static/Resources/cities.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Resources/li_model.pkl" afterPath="$PROJECT_DIR$/static/Resources/li_model.pkl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Resources/ner_model.pkl" afterPath="$PROJECT_DIR$/static/Resources/ner_model.pkl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/annotator.py" afterPath="$PROJECT_DIR$/annotator.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/analyser/colour.py" afterPath="$PROJECT_DIR$/analyser/colour.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/Interface27/final.html" afterPath="$PROJECT_DIR$/templates/Interface27/final.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Interface27/settings.py" afterPath="$PROJECT_DIR$/Interface27/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Interface27.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,10 +38,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="final.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="final.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/Interface27/final.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.1265823">
+            <state vertical-scroll-proportion="-20.766666">
               <caret line="114" column="31" selection-start-line="114" selection-start-column="31" selection-end-line="114" selection-end-column="31" />
               <folding>
                 <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
@@ -73,11 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Interface27/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="62" column="20" selection-start-line="62" selection-start-column="20" selection-end-line="62" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.063464835">
+              <caret line="46" column="35" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -133,8 +124,8 @@
         <option value="$PROJECT_DIR$/analyser/colour.py" />
         <option value="$PROJECT_DIR$/venv/local/lib/python2.7/site-packages/numpy/core/fromnumeric.py" />
         <option value="$PROJECT_DIR$/annotator.py" />
-        <option value="$PROJECT_DIR$/Interface27/settings.py" />
         <option value="$PROJECT_DIR$/templates/Interface27/final.html" />
+        <option value="$PROJECT_DIR$/Interface27/settings.py" />
       </list>
     </option>
   </component>
@@ -1018,14 +1009,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Interface27/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="62" column="20" selection-start-line="62" selection-start-column="20" selection-end-line="62" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/Interface27/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1036,7 +1019,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/Interface27/final.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1265823">
+        <state vertical-scroll-proportion="-20.766666">
           <caret line="114" column="31" selection-start-line="114" selection-start-column="31" selection-end-line="114" selection-end-column="31" />
           <folding>
             <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
@@ -1045,6 +1028,14 @@
             <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#div#2;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Interface27/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.063464835">
+          <caret line="46" column="35" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>

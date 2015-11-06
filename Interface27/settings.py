@@ -55,7 +55,7 @@ WSGI_APPLICATION = 'Interface27.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'dbmsat',
         'USER': 'root',
         'PASSWORD': '12345',
