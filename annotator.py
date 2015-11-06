@@ -71,7 +71,7 @@ def run_cleanup(word_token,x_label):
 
 def getXs():
     # Creating list of acronyms
-    with open('./Resources/AcroNew2.txt','r') as ip:
+    with open('./static/Resources/AcroNew2.txt','r') as ip:
         acronyms = ip.read().split()
     # Other Disallowed components
     punct = set(string.punctuation)
@@ -90,12 +90,12 @@ class Sklearn_ner_demo:
     def __init__(self,mode="test"):
         self.mode = mode
         if mode == "test":
-            ner_trained_model = load_model("./Resources/ner_model.pkl")
+            ner_trained_model = load_model("./static/Resources/ner_model.pkl")
             self.inv_label_dict = {
                 0 : "NNE",
                 1 : "NE",
             }
-            with open('./Resources/cities.txt','r') as ip:
+            with open('./static/Resources/cities.txt','r') as ip:
                 self.cities = ip.read().split()
             self.preprocessor_ne = ner_trained_model["preprocessor"]
             self.postprocessor_ne = ner_trained_model["postprocessor"]
@@ -151,7 +151,7 @@ class Sklearn_li_demo:
                 10 : "O",
             }
 
-            li_trained_model = load_model("./Resources/li_model.pkl")
+            li_trained_model = load_model("./static/Resources/li_model.pkl")
             self.preprocessor_li = li_trained_model["preprocessor"]
             self.postprocessor_li = li_trained_model["postprocessor"]
             self.clfs = li_trained_model["clfs"]
@@ -205,6 +205,7 @@ def run_demo(utter_demo):
     # Annotating NE
     print "annotating ne's"
     ner_annotator = Sklearn_ner_demo(mode="test")
+    print "I am here1"
     y_ne = [ner_annotator.run([X_ne_str[i]]) for i in xrange(len(X_ne_str))]
     # Deconstruct NE's
     print "deconstructing ne's"

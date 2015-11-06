@@ -1,4 +1,3 @@
-import re
 from annotator import run_demo
 
 def colour_coder(sentence):
