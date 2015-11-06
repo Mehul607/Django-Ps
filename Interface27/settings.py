@@ -1,6 +1,6 @@
 import os
 import dj_database_url
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = '_%1z3hd3zu)fw#x=*v^9v(eaa@$=n!+&uvl%f(#&*x&e#n$ne8'
 DEBUG = True
@@ -40,8 +40,7 @@ ROOT_URLCONF = 'Interface27.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')]
-        ,
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -59,7 +58,7 @@ WSGI_APPLICATION = 'Interface27.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'dbmsat',
         'USER': 'root',
         'PASSWORD': '12345',
