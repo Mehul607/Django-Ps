@@ -58,12 +58,13 @@ WSGI_APPLICATION = 'Interface27.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'dbmsat',
-        'USER': 'root',
-        'PASSWORD': '12345',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.sqlite3',
+
+        #'NAME': 'db.sqlite3',
+        #'USER': 'root',
+        #'PASSWORD': '12345',
+        #'HOST': '127.0.0.1',
+        #'PORT': '3306',
 
     }
 }
@@ -79,7 +80,7 @@ USE_L10N = True
 
 USE_TZ = True
 
-DATABASES['default'] =  dj_database_url.config()
+#DATABASES['default'] =  dj_database_url.config()
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 
